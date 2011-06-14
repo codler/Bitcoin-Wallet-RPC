@@ -1,0 +1,4 @@
+BitcoinWalletRPC/bin
+BitcoinWalletRPC/obj
+*.user
+*.suo
