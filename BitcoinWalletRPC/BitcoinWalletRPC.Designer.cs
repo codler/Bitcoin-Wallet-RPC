@@ -42,6 +42,11 @@
             this.rpc_params = new System.Windows.Forms.TextBox();
             this.label_params = new System.Windows.Forms.Label();
             this.label_donate = new System.Windows.Forms.Label();
+            this.be_address = new System.Windows.Forms.TextBox();
+            this.label_address = new System.Windows.Forms.Label();
+            this.be_lookup_balance = new System.Windows.Forms.Button();
+            this.label_be_balance = new System.Windows.Forms.Label();
+            this.label_donate2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // fetch
@@ -154,17 +159,69 @@
             // label_donate
             // 
             this.label_donate.AutoSize = true;
-            this.label_donate.Location = new System.Drawing.Point(15, 320);
+            this.label_donate.Location = new System.Drawing.Point(126, 320);
             this.label_donate.Name = "label_donate";
-            this.label_donate.Size = new System.Drawing.Size(343, 13);
+            this.label_donate.Size = new System.Drawing.Size(141, 13);
             this.label_donate.TabIndex = 13;
-            this.label_donate.Text = "Donations are appreciated - 176SZeDZJJ6sJi7cjVfRq4yD9wMaPsj2wC";
+            this.label_donate.Text = "Donations are appreciated - ";
+            // 
+            // be_address
+            // 
+            this.be_address.Location = new System.Drawing.Point(255, 26);
+            this.be_address.Name = "be_address";
+            this.be_address.Size = new System.Drawing.Size(220, 20);
+            this.be_address.TabIndex = 14;
+            // 
+            // label_address
+            // 
+            this.label_address.AutoSize = true;
+            this.label_address.Location = new System.Drawing.Point(204, 29);
+            this.label_address.Name = "label_address";
+            this.label_address.Size = new System.Drawing.Size(45, 13);
+            this.label_address.TabIndex = 15;
+            this.label_address.Text = "Address";
+            // 
+            // be_lookup_balance
+            // 
+            this.be_lookup_balance.Location = new System.Drawing.Point(378, 52);
+            this.be_lookup_balance.Name = "be_lookup_balance";
+            this.be_lookup_balance.Size = new System.Drawing.Size(97, 23);
+            this.be_lookup_balance.TabIndex = 16;
+            this.be_lookup_balance.Text = "Lookup balance";
+            this.be_lookup_balance.UseVisualStyleBackColor = true;
+            this.be_lookup_balance.Click += new System.EventHandler(this.be_lookup_balance_Click);
+            // 
+            // label_be_balance
+            // 
+            this.label_be_balance.AutoSize = true;
+            this.label_be_balance.Location = new System.Drawing.Point(252, 56);
+            this.label_be_balance.Name = "label_be_balance";
+            this.label_be_balance.Size = new System.Drawing.Size(49, 13);
+            this.label_be_balance.TabIndex = 17;
+            this.label_be_balance.Text = "Balance:";
+            this.label_be_balance.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label_donate2
+            // 
+            this.label_donate2.BackColor = System.Drawing.SystemColors.Control;
+            this.label_donate2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.label_donate2.Location = new System.Drawing.Point(264, 320);
+            this.label_donate2.Name = "label_donate2";
+            this.label_donate2.ReadOnly = true;
+            this.label_donate2.Size = new System.Drawing.Size(211, 13);
+            this.label_donate2.TabIndex = 18;
+            this.label_donate2.Text = "176SZeDZJJ6sJi7cjVfRq4yD9wMaPsj2wC";
             // 
             // BitcoinWalletRPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 345);
+            this.Controls.Add(this.label_donate2);
+            this.Controls.Add(this.label_be_balance);
+            this.Controls.Add(this.be_lookup_balance);
+            this.Controls.Add(this.label_address);
+            this.Controls.Add(this.be_address);
             this.Controls.Add(this.label_donate);
             this.Controls.Add(this.label_params);
             this.Controls.Add(this.rpc_params);
@@ -203,6 +260,11 @@
         private System.Windows.Forms.TextBox rpc_params;
         private System.Windows.Forms.Label label_params;
         private System.Windows.Forms.Label label_donate;
+        private System.Windows.Forms.TextBox be_address;
+        private System.Windows.Forms.Label label_address;
+        private System.Windows.Forms.Button be_lookup_balance;
+        private System.Windows.Forms.Label label_be_balance;
+        private System.Windows.Forms.TextBox label_donate2;
     }
 }
 

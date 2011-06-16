@@ -47,5 +47,19 @@ namespace BitcoinWalletRPC
             result.Text = c.UploadString(url, "POST", "{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", \"method\": \"" + rpc_method.Text + "\", \"params\": [" + rpc_params.Text + "] }");
             
         }
+
+        private void be_lookup_balance_Click(object sender, EventArgs e)
+        {
+            label_be_balance.Text = "Balance: " + simple_wget("http://blockexplorer.com/q/getreceivedbyaddress/" + be_address.Text);
+        }
+
+        public string simple_wget(string url)
+        {
+            WebClient c = new WebClient();
+            ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(cert);
+            c.Headers.Add("User-Agent", user_agent);
+
+            return c.DownloadString(url);
+        }
     }
 }
